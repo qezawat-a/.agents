@@ -1,0 +1,273 @@
+# tradingview-bridge — service-local control policy (v0.2.0 — PR 2).
+# Composes with the investment-management skill's .control/policy.yaml and
+# the umbrella workspace .control/policy.yaml (broomva/workspace).
+
+service: tradingview-bridge
+version: 0.2.0
+canonical-adr: https://github.com/broomva/workspace/blob/main/docs/specs/2026-05-22-broker-selection-cross-asset.html
+linear-ticket: https://github.com/broomva/workspace/blob/main/tasks/bro-167-cross-asset-trading-platform.md
+
+gates:
+  paper-only-mode:
+    enforce: startup
+    blocker: true
+    description: >
+      Service exits with non-zero status at startup if
+      TVBRIDGE_TRADING_MODE != "paper".
+    test-coverage:
+      - tests/test_webhook_smoke.py::test_paper_only_assertion_blocks_live
+
+  source-ip-allowlist:
+    enforce: runtime
+    blocker: true
+    description: >
+      Every POST /webhook request must originate from an IP in
+      TVBRIDGE_TV_ALLOWED_IPS (TradingView's published webhook source IPs).
+    test-coverage:
+      - tests/test_webhook_smoke.py::test_webhook_wrong_ip
+
+  shared-secret-constant-time:
+    enforce: runtime
+    blocker: true
+    description: >
+      The `secret` field in the alert body must match
+      TVBRIDGE_TV_WEBHOOK_SECRET under hmac.compare_digest.
+    test-coverage:
+      - tests/test_auth.py::test_require_valid_secret_rejects
+      - tests/test_webhook_smoke.py::test_webhook_wrong_secret
+      - tests/test_webhook_smoke.py::test_webhook_missing_secret
+
+  auth-before-schema-validation:
+    enforce: runtime
+    blocker: false
+    description: >
+      Auth (secret check) runs BEFORE pydantic schema validation.
+    test-coverage:
+      - tests/test_webhook_smoke.py::test_webhook_validation_error_after_auth
+
+  # --- PR 2 newly-active gates ---
+
+  webhook-rate-limit:
+    enforce: runtime
+    blocker: true
+    description: >
+      Per-IP rate limit (default 60 req/min) via TokenBucketLimiter (60s
+      sliding window). Excess requests get 429 without consuming the
+      secret/schema budget.
+    test-coverage:
+      - tests/test_ratelimit.py
+      - tests/test_webhook_smoke.py::test_webhook_429_on_rate_limit
+
+  alert-idempotency:
+    enforce: runtime
+    blocker: false
+    description: >
+      SQLite store keyed on alert_id; duplicate alerts get 200 with
+      status=duplicate + same order_id from the original dispatch. Prevents
+      double-fire on TradingView retries.
+    test-coverage:
+      - tests/test_idempotency.py
+      - tests/test_webhook_smoke.py::test_webhook_duplicate_alert_returns_duplicate
+
+  broker-mode-mock-default:
+    enforce: startup
+    blocker: false
+    description: >
+      TVBRIDGE_BROKER_MODE defaults to "mock" — no broker contact in CI or
+      local dev without explicit opt-in. Operator flips to "real-paper"
+      explicitly + provides per-broker credentials.
+    test-coverage:
+      - tests/test_clients_interface.py::test_real_client_mock_mode_places_order
+
+  real-paper-requires-creds:
+    enforce: runtime
+    blocker: true
+    description: >
+      When TVBRIDGE_BROKER_MODE=real-paper, each broker client checks for
+      its required env vars and raises NotConfiguredError if missing. The
+      dispatcher translates this into a `rejected` DispatchResult; no
+      cryptic SDK exceptions leak to the response.
+    test-coverage:
+      - tests/test_clients_interface.py::test_real_client_real_paper_without_creds_raises
+
+  # --- Autonomous operator gates (BRO-1247) ---
+
+  operator-dogfood-precondition:
+    enforce: runtime
+    blocker: true
+    description: >
+      The dogfood-as-precondition interlock. The operator manages positions
+      ONLY when its self-dogfood canary passed this tick AND no hard halt is
+      active (OperatorState.position_management_allowed). P11 crystallized
+      into runtime: never manage money on a pipeline you cannot confirm works.
+    test-coverage:
+      - tests/test_operator_state.py::test_fresh_state_blocks_position_management
+      - tests/test_operator_loop.py::test_failing_canary_trips_interlock
+      - tests/test_operator_loop.py::test_passing_tick_allows_management
+
+  operator-hard-halt-requires-reset:
+    enforce: runtime
+    blocker: true
+    description: >
+      After `halt_after_failures` consecutive canary failures the operator
+      enters a STICKY hard halt. A subsequently-passing canary does NOT clear
+      it — only an explicit `operate reset` (operator-acknowledged recovery)
+      does. Prevents an autonomous loop from silently resuming after an
+      intermittent pipeline fault.
+    test-coverage:
+      - tests/test_operator_state.py::test_hard_halt_survives_a_passing_canary
+      - tests/test_operator_loop.py::test_hard_halt_blocks_until_reset
+
+  operator-paper-only:
+    enforce: startup
+    blocker: true
+    description: >
+      The operator CLI runs assert_paper_only() before constructing its loop —
+      it refuses to operate outside paper mode, identical to the bridge's
+      startup guard.
+    test-coverage:
+      - tests/test_operator_cli.py::test_cli_refuses_live_mode
+
+  operator-canary-excluded-from-positions:
+    enforce: runtime
+    blocker: true
+    description: >
+      Canary orders (strategy_name prefixed `__canary__`) exercise the full
+      dispatch pipeline but are filtered at the single order-ledger write point,
+      so they never pollute net positions. The self-dogfood cannot move the
+      book it is meant to verify.
+    test-coverage:
+      - tests/test_orders.py::test_canary_orders_filtered
+
+  operator-canary-read-only-in-real-venue:
+    enforce: runtime
+    blocker: true
+    description: >
+      CRITICAL. In any real-venue broker mode (tradingview-paper, real-paper)
+      the self-dogfood canary is READ-ONLY — it verifies the venue via
+      health_check(), and NEVER places an order. The place-an-order canary is
+      used only in `mock` mode (harmless MockClient). Without this, running the
+      operator against a real account would drop a canary order every tick.
+      Proven live: 2 operator ticks in tradingview-paper mode placed 0 orders;
+      the canary passed via venue_health.
+    test-coverage:
+      - tests/test_operator_canary.py::test_read_only_canary_never_dispatches
+      - tests/test_operator_canary.py::test_read_only_canary_fails_on_unhealthy_venue
+
+  operator-reconciles-real-book:
+    enforce: runtime
+    blocker: false
+    description: >
+      In a single real-venue mode the operator reconciles its order ledger
+      against the broker's actual positions (TradingViewPaperClient.list_positions).
+      Drift — a position the operator did not place (broker_only) or a believed
+      position the broker no longer shows (ledger_only) — is surfaced via
+      operator_position_drift, never silent. Live read quality is subject to the
+      tab-churn limitation (degrades gracefully to empty); the reconcile logic
+      is unit-tested.
+    test-coverage:
+      - tests/test_operator_positions.py::test_reconcile_matched_and_broker_only_drift
+      - tests/test_operator_loop.py::test_medium_tick_reconciles_against_broker
+
+  operator-position-cap-no-silent-exceed:
+    enforce: runtime
+    blocker: false
+    description: >
+      When open positions exceed max_open_positions the operator logs
+      operator_position_cap_exceeded (P11 no-silent-caps) rather than silently
+      tolerating it. Non-blocking in paper/mock; promotion to blocker tracked
+      for the real-paper rebalance follow-up.
+    test-coverage:
+      - tests/test_operator_loop.py::test_position_cap_does_not_crash
+
+  # --- TradingView-Paper adapter gates (BRO-1250) ---
+
+  tradingview-paper-is-simulated:
+    enforce: by-design
+    blocker: true
+    description: >
+      TVBRIDGE_BROKER_MODE=tradingview-paper drives TradingView's built-in
+      Paper Trading simulator only — a simulated broker with no real capital.
+      It composes with the bridge's paper-only startup assertion. There is no
+      code path from this mode to a live-money broker.
+    test-coverage:
+      - tests/test_clients_tradingview_paper.py::test_broker_name
+
+  tradingview-paper-write-actions-bounded:
+    enforce: runtime
+    blocker: true
+    description: >
+      Full order lifecycle: market buy/sell, close (per symbol), flatten (all),
+      cancel. Each maps to an explicit UI flow; a missing control raises and the
+      dispatcher renders a clean `rejected` — never a silent partial action.
+      A double-submit guard ensures a quick button that places immediately is
+      never followed by a second ticket-submit click. limit/stop + modify are
+      deferred.
+    test-coverage:
+      - tests/test_clients_tradingview_paper.py::test_no_double_submit_when_quick_button_places_immediately
+      - tests/test_clients_tradingview_paper.py::test_close_action_via_place_order
+      - tests/test_clients_tradingview_paper.py::test_flatten_action_via_place_order
+      - tests/test_clients_tradingview_paper.py::test_close_action_no_position_becomes_rejected
+
+  tradingview-paper-list-orders-no-phantom:
+    enforce: runtime
+    blocker: false
+    description: >
+      list_orders() is gated on the `Orders N` tab count and reads working
+      orders from row cells — never from the order-entry ticket submit button
+      (which also reads as `Buy N SYM @ price`). Caught live: a phantom order
+      was reported when 0 were working. Regression-tested.
+    test-coverage:
+      - tests/test_clients_tradingview_paper.py::test_list_orders_ignores_ticket_button_when_count_zero
+
+  tradingview-paper-browser-failure-is-rejected:
+    enforce: runtime
+    blocker: true
+    description: >
+      If Interceptor / the browser session is unreachable, the client raises
+      NotConfiguredError → `rejected` (not a crash, not a blind retry). The
+      account is never touched on an unverified control surface.
+    test-coverage:
+      - tests/test_clients_tradingview_paper.py::test_browser_error_becomes_not_configured
+      - tests/test_clients_tradingview_paper.py::test_missing_side_control_raises_not_configured
+
+  tradingview-paper-selectors-by-name:
+    enforce: runtime
+    blocker: false
+    description: >
+      The client never hardcodes per-session element refs (e21, …). It resolves
+      controls by semantic role+name each call (find_ref), so a TradingView DOM
+      reshuffle degrades to a clean `rejected` with a re-pin hint rather than
+      clicking the wrong element.
+    test-coverage:
+      - tests/test_interceptor_driver.py
+
+# Still deferred — promoted to follow-up for traceability.
+deferred:
+  per-broker-position-cap:
+    target-pr: 3
+    description: >
+      S9 candidate — per-broker drawdown + concentration caps. Requires
+      a broker-positions reader (REST poll) which depends on real-paper
+      wiring (PR 2b).
+
+  formulario-4-reminder:
+    target-pr: 3
+    description: >
+      S7 candidate — any IBKR outbound capital instruction above threshold
+      blocks until Formulario 4 (Banco República) is logged. Depends on
+      capital-transfer detection, also PR 2b.
+
+  cfd-broker-blocked:
+    target-pr: 4
+    description: >
+      S8 candidate — hard-block any executor call to a CFD broker
+      endpoint. Not relevant in PR 2 because the dispatcher only routes
+      to IBKR/Kraken/Polymarket (no CFD path exists).
+
+  bookkeeping-journal-required:
+    target-pr: 3
+    description: >
+      Currently graceful no-op when CLI not found (this allows tests + CI
+      to pass without the workspace bookkeeping CLI). PR 3 promotes to
+      blocker when running in production deployment.

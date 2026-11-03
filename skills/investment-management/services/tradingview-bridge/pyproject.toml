@@ -1,0 +1,121 @@
+[project]
+name = "tradingview-bridge"
+version = "0.13.0"
+description = "TradingView Pine Script alert webhook bridge — multi-broker paper executor + autonomous self-dogfooding operator"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "broomva", email = "devteam@getstimulus.ai" }]
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.5.0",
+    "structlog>=24.4.0",
+    "aiosqlite>=0.20.0",
+]
+
+[project.optional-dependencies]
+# Real-paper broker SDKs — only needed when TVBRIDGE_BROKER_MODE=real-paper.
+# CI installs only base deps (mock mode); operators flipping to real-paper
+# install `tradingview-bridge[brokers]` to pull in the SDKs.
+brokers = [
+    "ib-async>=1.0.1",
+    "ccxt>=4.4.0",
+    "py-clob-client>=0.21",
+]
+# Real market data via qlib's point-in-time data layer — only needed for
+# `research/optimize run --qlib <instrument>`. Heavy; CI never installs it
+# (bars_from_qlib is unit-tested with a fake and dogfooded live).
+qlib = [
+    "pyqlib>=0.9.6",
+]
+# Kronos foundation-model forecaster (ForecastStrategy adapter). Heavy (torch);
+# CI never installs it. NOTE: Kronos itself is not on PyPI — clone
+# github.com/shiyu-coder/Kronos and supply its `model/` on the path (see
+# KronosForecaster.kronos_repo_path). This extra only covers the runtime deps.
+kronos = [
+    "torch>=2.0.0",
+    "huggingface_hub>=0.33.0",
+    "einops>=0.8.0",
+    "safetensors>=0.6.0",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.27.0",
+    "ruff>=0.6.0",
+    "mypy>=1.11.0",
+]
+
+[project.scripts]
+# The autonomous operator entry point. `operate tick` runs one self-dogfood +
+# position-management tick; `operate run --interval 60` is the daemon form.
+operate = "tradingview_bridge.operator.cli:main"
+# The autoresearch orchestrator (L2 slow loop). `research run` evaluates the
+# strategy roster → leaderboard + (human-gated) allocation recommendation.
+research = "tradingview_bridge.orchestrator.cli:main"
+# The EGRI parameter-optimizer. `optimize run --family …` grid-searches a strategy
+# family with a true train/test holdout → best generalizing params (human-gated).
+optimize = "tradingview_bridge.optimize.cli:main"
+# The roster promotion registry (closes the loop). `roster propose` records an
+# OOS-validated optimizer winner; `roster promote <id>` is the human gate that
+# activates it; the orchestrator measures active params via `research run --roster-db`.
+roster = "tradingview_bridge.roster.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tradingview_bridge"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+pythonpath = ["src"]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning:passlib",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "I", "N", "W", "UP", "B", "A", "C4", "S", "T20", "PT", "RUF",
+]
+ignore = [
+    "S101",  # allow assert in tests
+    "B008",  # FastAPI's idiomatic pattern: Depends() in argument defaults
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S105", "S106", "SLF001"]  # tests poke privates + secrets
+# history() builds a WHERE only from literal column clauses ("strategy = ?" /
+# "kind = ?"); every value is parameterized. No injection surface — see comment
+# in ledger.py. The S608 heuristic can't see the literal-only construction.
+"src/tradingview_bridge/evaluation/ledger.py" = ["S608"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+
+[[tool.mypy.overrides]]
+# Optional broker SDKs are not installed in CI (mock mode only). Don't
+# fail mypy because their type stubs aren't reachable.
+module = ["ib_async.*", "ccxt.*", "py_clob_client.*", "qlib.*", "torch.*", "pandas.*", "numpy.*", "model.*"]
+ignore_missing_imports = true

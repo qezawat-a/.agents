@@ -1,0 +1,1423 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-10-20T11:45:25.180Z",
+      "updatedAt": "2026-10-20T11:45:25.180Z"
+    },
+    "trading-skills-navigator": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/trading-skills-navigator/SKILL.md",
+      "skillFolderHash": "60dba90c226aa70c4ffe4cc4ce42c133ffb62768",
+      "installedAt": "2026-10-20T13:43:12.385Z",
+      "updatedAt": "2026-10-20T13:59:53.994Z"
+    },
+    "accessibility": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/accessibility/SKILL.md",
+      "skillFolderHash": "1b9f71ad866637569eea15730e6bb36ecb8a7a03",
+      "installedAt": "2026-10-20T13:54:09.863Z",
+      "updatedAt": "2026-10-20T13:54:09.863Z"
+    },
+    "agent-architecture-audit": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/agent-architecture-audit/SKILL.md",
+      "skillFolderHash": "ca010515a0a51075982cb9b7f2c23fd25d08278e",
+      "installedAt": "2026-10-20T13:54:09.909Z",
+      "updatedAt": "2026-10-20T13:54:09.909Z"
+    },
+    "agent-harness-construction": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/agent-harness-construction/SKILL.md",
+      "skillFolderHash": "667e6b5ca398ed607f04e48aa30e78841abd24b8",
+      "installedAt": "2026-10-20T13:54:09.924Z",
+      "updatedAt": "2026-10-20T13:54:09.924Z"
+    },
+    "agent-introspection-debugging": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/agent-introspection-debugging/SKILL.md",
+      "skillFolderHash": "462c22a06871221b14db9930b5e07f72b6b06373",
+      "installedAt": "2026-10-20T13:54:09.938Z",
+      "updatedAt": "2026-10-20T13:54:09.938Z"
+    },
+    "agent-runtime-gateway-smoke-test": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/agent-runtime-gateway-smoke-test/SKILL.md",
+      "skillFolderHash": "331f606d30c516430af0bc6627fcf049961b1b2e",
+      "installedAt": "2026-10-20T13:54:09.950Z",
+      "updatedAt": "2026-10-20T13:54:09.950Z"
+    },
+    "agent-self-evaluation": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/agent-self-evaluation/SKILL.md",
+      "skillFolderHash": "1aa0e06f89546f819d3512244a8c93476fe30087",
+      "installedAt": "2026-10-20T13:54:09.958Z",
+      "updatedAt": "2026-10-20T13:54:09.958Z"
+    },
+    "agent-sort": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/agent-sort/SKILL.md",
+      "skillFolderHash": "2fbe885710968e83ad677d1a179fb8c9eba13973",
+      "installedAt": "2026-10-20T13:54:09.972Z",
+      "updatedAt": "2026-10-20T13:54:09.972Z"
+    },
+    "agentic-engineering": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/agentic-engineering/SKILL.md",
+      "skillFolderHash": "3911778d1fd81c8ea576a75f9e9e99d2a3dc6372",
+      "installedAt": "2026-10-20T13:54:09.982Z",
+      "updatedAt": "2026-10-20T13:54:09.982Z"
+    },
+    "ai-first-engineering": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/ai-first-engineering/SKILL.md",
+      "skillFolderHash": "f026d056d3c04d71da1e00f85ccc59ebd338652e",
+      "installedAt": "2026-10-20T13:54:09.997Z",
+      "updatedAt": "2026-10-20T13:54:09.997Z"
+    },
+    "ai-regression-testing": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/ai-regression-testing/SKILL.md",
+      "skillFolderHash": "1fa70383b8fdc718fd202ec33bb6b141ef1315c5",
+      "installedAt": "2026-10-20T13:54:10.004Z",
+      "updatedAt": "2026-10-20T13:54:10.004Z"
+    },
+    "android-clean-architecture": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/android-clean-architecture/SKILL.md",
+      "skillFolderHash": "bbe7734ca66a473a4cc1438835154ba187a74667",
+      "installedAt": "2026-10-20T13:54:10.012Z",
+      "updatedAt": "2026-10-20T13:54:10.012Z"
+    },
+    "angular-developer": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/angular-developer/SKILL.md",
+      "skillFolderHash": "4290dad6007ee8fcae32a91a914bdb10fd5bbfbf",
+      "installedAt": "2026-10-20T13:54:10.016Z",
+      "updatedAt": "2026-10-20T13:54:10.016Z"
+    },
+    "api-connector-builder": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/api-connector-builder/SKILL.md",
+      "skillFolderHash": "0282c47c1c5113c398527a515e251b143067ca2b",
+      "installedAt": "2026-10-20T13:54:10.020Z",
+      "updatedAt": "2026-10-20T13:54:10.020Z"
+    },
+    "api-design": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/api-design/SKILL.md",
+      "skillFolderHash": "cf2611776c37ed6a4855866e28e48074a780bb91",
+      "installedAt": "2026-10-20T13:54:10.024Z",
+      "updatedAt": "2026-10-20T13:54:10.024Z"
+    },
+    "article-writing": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/article-writing/SKILL.md",
+      "skillFolderHash": "8151e4103578c0c00541436af592f39620f458ce",
+      "installedAt": "2026-10-20T13:54:10.027Z",
+      "updatedAt": "2026-10-20T13:54:10.027Z"
+    },
+    "automation-audit-ops": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/automation-audit-ops/SKILL.md",
+      "skillFolderHash": "033c68cb6ae757717d0011cae086929d0dbd954b",
+      "installedAt": "2026-10-20T13:54:10.031Z",
+      "updatedAt": "2026-10-20T13:54:10.031Z"
+    },
+    "autonomous-agent-harness": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/autonomous-agent-harness/SKILL.md",
+      "skillFolderHash": "8a6e9b5c7f8756ba86a0166cb46052adc9622a5b",
+      "installedAt": "2026-10-20T13:54:10.034Z",
+      "updatedAt": "2026-10-20T13:54:10.034Z"
+    },
+    "autonomous-loops": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/autonomous-loops/SKILL.md",
+      "skillFolderHash": "86f3d34f60fae0b1d12353b3605a2de99e21f7f7",
+      "installedAt": "2026-10-20T13:54:10.038Z",
+      "updatedAt": "2026-10-20T13:54:10.038Z"
+    },
+    "backend-patterns": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/backend-patterns/SKILL.md",
+      "skillFolderHash": "70475f53e26735e2bed243107ff921c2c32cdca5",
+      "installedAt": "2026-10-20T13:54:10.042Z",
+      "updatedAt": "2026-10-20T13:54:10.042Z"
+    },
+    "browser-qa": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/browser-qa/SKILL.md",
+      "skillFolderHash": "dc89732f5828493b2e8d19109b69ada8c9bee125",
+      "installedAt": "2026-10-20T13:54:10.047Z",
+      "updatedAt": "2026-10-20T13:54:10.047Z"
+    },
+    "codebase-onboarding": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/codebase-onboarding/SKILL.md",
+      "skillFolderHash": "0b07c79e5f5b4d54047eaeaffb484a30d6332012",
+      "installedAt": "2026-10-20T13:54:10.050Z",
+      "updatedAt": "2026-10-20T13:54:10.050Z"
+    },
+    "codehealth-mcp": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/codehealth-mcp/SKILL.md",
+      "skillFolderHash": "bc4880e6f81bc3ba7ff7cf269c05573ca3a64cf8",
+      "installedAt": "2026-10-20T13:54:10.052Z",
+      "updatedAt": "2026-10-20T13:54:10.052Z"
+    },
+    "coding-standards": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/coding-standards/SKILL.md",
+      "skillFolderHash": "cba68c74a296bc865d33e6178cb07abc39bb94d6",
+      "installedAt": "2026-10-20T13:54:10.064Z",
+      "updatedAt": "2026-10-20T13:54:10.064Z"
+    },
+    "competitive-platform-analysis": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/competitive-platform-analysis/SKILL.md",
+      "skillFolderHash": "a97383b1a82d181f0a2938a72c1430ea17bef088",
+      "installedAt": "2026-10-20T13:54:10.071Z",
+      "updatedAt": "2026-10-20T13:54:10.071Z"
+    },
+    "competitive-report-structure": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/competitive-report-structure/SKILL.md",
+      "skillFolderHash": "a04ff350122367757934c6fb64d32b6fdce6fed9",
+      "installedAt": "2026-10-20T13:54:10.076Z",
+      "updatedAt": "2026-10-20T13:54:10.076Z"
+    },
+    "compose-multiplatform-patterns": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/compose-multiplatform-patterns/SKILL.md",
+      "skillFolderHash": "1f77d9232774a7812e1be3022a1bb060ffbde8d0",
+      "installedAt": "2026-10-20T13:54:10.081Z",
+      "updatedAt": "2026-10-20T13:54:10.081Z"
+    },
+    "content-engine": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/content-engine/SKILL.md",
+      "skillFolderHash": "e56fbcb5a355f44c63ddfe90090bf8523905b7fe",
+      "installedAt": "2026-10-20T13:54:10.087Z",
+      "updatedAt": "2026-10-20T13:54:10.087Z"
+    },
+    "continuous-agent-loop": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/continuous-agent-loop/SKILL.md",
+      "skillFolderHash": "5c3a4875fa105cd82e1b6784c7f78504eab1b943",
+      "installedAt": "2026-10-20T13:54:10.091Z",
+      "updatedAt": "2026-10-20T13:54:10.091Z"
+    },
+    "continuous-learning": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/continuous-learning/SKILL.md",
+      "skillFolderHash": "e09c360938a3701465a8cdb480dd22fac9394422",
+      "installedAt": "2026-10-20T13:54:10.095Z",
+      "updatedAt": "2026-10-20T13:54:10.095Z"
+    },
+    "continuous-learning-v2": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/continuous-learning-v2/SKILL.md",
+      "skillFolderHash": "d40bc14bdd55c838f565a86593a90ac7ab1fd76c",
+      "installedAt": "2026-10-20T13:54:10.099Z",
+      "updatedAt": "2026-10-20T13:54:10.099Z"
+    },
+    "contract-first": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/contract-first/SKILL.md",
+      "skillFolderHash": "29e194d1f3010f43875c0918cfa3a1951872dd9a",
+      "installedAt": "2026-10-20T13:54:10.104Z",
+      "updatedAt": "2026-10-20T13:54:10.104Z"
+    },
+    "cost-tracking": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/cost-tracking/SKILL.md",
+      "skillFolderHash": "68ccee1273eb1596c837ccb465ba5b8f1d4d8b60",
+      "installedAt": "2026-10-20T13:54:10.109Z",
+      "updatedAt": "2026-10-20T13:54:10.109Z"
+    },
+    "cpp-coding-standards": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/cpp-coding-standards/SKILL.md",
+      "skillFolderHash": "f61788dbce2ff996ec7d71764f890298f784afb9",
+      "installedAt": "2026-10-20T13:54:10.114Z",
+      "updatedAt": "2026-10-20T13:54:10.114Z"
+    },
+    "council-multi-model": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/council-multi-model/SKILL.md",
+      "skillFolderHash": "065ae8348aad27b1fc332807a8778b2abc5ee7ef",
+      "installedAt": "2026-10-20T13:54:10.118Z",
+      "updatedAt": "2026-10-20T13:54:10.118Z"
+    },
+    "customer-billing-ops": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/customer-billing-ops/SKILL.md",
+      "skillFolderHash": "57880f82b8e33431c1d0c0f34ae9cd6350ebd84f",
+      "installedAt": "2026-10-20T13:54:10.122Z",
+      "updatedAt": "2026-10-20T13:54:10.122Z"
+    },
+    "customs-trade-compliance": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/customs-trade-compliance/SKILL.md",
+      "skillFolderHash": "e85ccd0fd63d7c0ee55beec4c414fb1ec044b823",
+      "installedAt": "2026-10-20T13:54:10.126Z",
+      "updatedAt": "2026-10-20T13:54:10.126Z"
+    },
+    "dashboard-builder": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/dashboard-builder/SKILL.md",
+      "skillFolderHash": "9f05adcf569e07051e316bdcbb00df0788a3e7b2",
+      "installedAt": "2026-10-20T13:54:10.131Z",
+      "updatedAt": "2026-10-20T13:54:10.131Z"
+    },
+    "data-scraper-agent": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/data-scraper-agent/SKILL.md",
+      "skillFolderHash": "856aeed40083f437c5cae534153413362f8d03ce",
+      "installedAt": "2026-10-20T13:54:10.135Z",
+      "updatedAt": "2026-10-20T13:54:10.135Z"
+    },
+    "database-migrations": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/database-migrations/SKILL.md",
+      "skillFolderHash": "b0acdc0e55cafeeef965a66c6827dedb240a8cd9",
+      "installedAt": "2026-10-20T13:54:10.142Z",
+      "updatedAt": "2026-10-20T13:54:10.142Z"
+    },
+    "deep-research": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/deep-research/SKILL.md",
+      "skillFolderHash": "47d50406a0d09855f2e8b6d43f432dbcc45593e9",
+      "installedAt": "2026-10-20T13:54:10.150Z",
+      "updatedAt": "2026-10-20T13:54:10.150Z"
+    },
+    "deployment-patterns": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/deployment-patterns/SKILL.md",
+      "skillFolderHash": "55265cfe9c4b8a8db109533e1b111fd7cbf9b2f6",
+      "installedAt": "2026-10-20T13:54:10.160Z",
+      "updatedAt": "2026-10-20T13:54:10.160Z"
+    },
+    "docs-governance": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/docs-governance/SKILL.md",
+      "skillFolderHash": "9447842d8441e7a9021bf772d542582729bbe404",
+      "installedAt": "2026-10-20T13:54:10.164Z",
+      "updatedAt": "2026-10-20T13:54:10.164Z"
+    },
+    "documentation-lookup": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/documentation-lookup/SKILL.md",
+      "skillFolderHash": "6cc1cb204bb266cb747d3b466c3da5120b11ef7e",
+      "installedAt": "2026-10-20T13:54:10.166Z",
+      "updatedAt": "2026-10-20T13:54:10.166Z"
+    },
+    "dynamic-workflow-mode": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/dynamic-workflow-mode/SKILL.md",
+      "skillFolderHash": "d90821c77fac0709d817bf36b7bc172797138e0b",
+      "installedAt": "2026-10-20T13:54:10.170Z",
+      "updatedAt": "2026-10-20T13:54:10.170Z"
+    },
+    "ecc-tools-cost-audit": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/ecc-tools-cost-audit/SKILL.md",
+      "skillFolderHash": "f61819850d1103967f55a858da2a79d74aff22e0",
+      "installedAt": "2026-10-20T13:54:10.174Z",
+      "updatedAt": "2026-10-20T13:54:10.174Z"
+    },
+    "error-handling": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/error-handling/SKILL.md",
+      "skillFolderHash": "9020de9e00f6b271ca8e89313546e0123f40642f",
+      "installedAt": "2026-10-20T13:54:10.176Z",
+      "updatedAt": "2026-10-20T13:54:10.176Z"
+    },
+    "exa-search": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/exa-search/SKILL.md",
+      "skillFolderHash": "2c59b9f7f46ffff9b45c656e7bc0bb07468729cc",
+      "installedAt": "2026-10-20T13:54:10.179Z",
+      "updatedAt": "2026-10-20T13:54:10.179Z"
+    },
+    "finance-billing-ops": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/finance-billing-ops/SKILL.md",
+      "skillFolderHash": "01738bb09e3e211b1cb60db171f25ce7aabd9dd7",
+      "installedAt": "2026-10-20T13:54:10.182Z",
+      "updatedAt": "2026-10-20T13:54:10.182Z"
+    },
+    "flox-environments": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/flox-environments/SKILL.md",
+      "skillFolderHash": "3e4f514dc6068bc79cd4f5915a1ed7468cc898c5",
+      "installedAt": "2026-10-20T13:54:10.186Z",
+      "updatedAt": "2026-10-20T13:54:10.186Z"
+    },
+    "flutter-dart-code-review": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/flutter-dart-code-review/SKILL.md",
+      "skillFolderHash": "97d34be246dbda5172b3e482b6ffd0de6be0294f",
+      "installedAt": "2026-10-20T13:54:10.189Z",
+      "updatedAt": "2026-10-20T13:54:10.189Z"
+    },
+    "frontend-design-direction": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/frontend-design-direction/SKILL.md",
+      "skillFolderHash": "1f7d7c0db5b1ac65534567f8b76d35155dd192d1",
+      "installedAt": "2026-10-20T13:54:10.193Z",
+      "updatedAt": "2026-10-20T13:54:10.193Z"
+    },
+    "generating-python-installer": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/generating-python-installer/SKILL.md",
+      "skillFolderHash": "daac569f4db4a27116eadfb510186715a84955d3",
+      "installedAt": "2026-10-20T13:54:10.197Z",
+      "updatedAt": "2026-10-20T13:54:10.197Z"
+    },
+    "git-workflow": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/git-workflow/SKILL.md",
+      "skillFolderHash": "05020055c65f40ef9f0ba6d0dc141355a6089bf0",
+      "installedAt": "2026-10-20T13:54:10.200Z",
+      "updatedAt": "2026-10-20T13:54:10.200Z"
+    },
+    "hermes-imports": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/hermes-imports/SKILL.md",
+      "skillFolderHash": "0c1ef913ff1f6bba9164fa90f6ee7744e025428e",
+      "installedAt": "2026-10-20T13:54:10.205Z",
+      "updatedAt": "2026-10-20T13:54:10.205Z"
+    },
+    "java-coding-standards": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/java-coding-standards/SKILL.md",
+      "skillFolderHash": "82d6c06731702476735e392fcb016274d8845191",
+      "installedAt": "2026-10-20T13:54:10.212Z",
+      "updatedAt": "2026-10-20T13:54:10.212Z"
+    },
+    "lead-intelligence": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/lead-intelligence/SKILL.md",
+      "skillFolderHash": "0472626fc7b64d7839a7f608cd5476ee1b747a08",
+      "installedAt": "2026-10-20T13:54:10.215Z",
+      "updatedAt": "2026-10-20T13:54:10.215Z"
+    },
+    "llm-trading-agent-security": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/llm-trading-agent-security/SKILL.md",
+      "skillFolderHash": "87fe38dcae8fd692b4036efb3505a56e2372d621",
+      "installedAt": "2026-10-20T13:54:10.218Z",
+      "updatedAt": "2026-10-20T13:54:10.218Z"
+    },
+    "logistics-exception-management": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/logistics-exception-management/SKILL.md",
+      "skillFolderHash": "fc53442b7c707d020f75c1f4b36f053550f70747",
+      "installedAt": "2026-10-20T13:54:10.222Z",
+      "updatedAt": "2026-10-20T13:54:10.222Z"
+    },
+    "loop-design-check": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/loop-design-check/SKILL.md",
+      "skillFolderHash": "692bbecec7e9782e4cfa92c1a193231914593f96",
+      "installedAt": "2026-10-20T13:54:10.225Z",
+      "updatedAt": "2026-10-20T13:54:10.225Z"
+    },
+    "market-research": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/market-research/SKILL.md",
+      "skillFolderHash": "c83f8030e9c1965eafdf12ddee97df575a50093b",
+      "installedAt": "2026-10-20T13:54:10.229Z",
+      "updatedAt": "2026-10-20T13:54:10.229Z"
+    },
+    "marketing-campaign": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/marketing-campaign/SKILL.md",
+      "skillFolderHash": "9320e2aac6c35cf5d30b538c5845f0e0fdcd0ce1",
+      "installedAt": "2026-10-20T13:54:10.232Z",
+      "updatedAt": "2026-10-20T13:54:10.232Z"
+    },
+    "mcp-dependency-review": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/mcp-dependency-review/SKILL.md",
+      "skillFolderHash": "eda57816b27f15d26811d28ccc977ff699633d04",
+      "installedAt": "2026-10-20T13:54:10.235Z",
+      "updatedAt": "2026-10-20T13:54:10.235Z"
+    },
+    "mcp-server-patterns": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/mcp-server-patterns/SKILL.md",
+      "skillFolderHash": "fc7007dfcae735eb2fe464d13b39c7d9cddd4131",
+      "installedAt": "2026-10-20T13:54:10.239Z",
+      "updatedAt": "2026-10-20T13:54:10.239Z"
+    },
+    "prediction-market-risk-review": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/prediction-market-risk-review/SKILL.md",
+      "skillFolderHash": "cd904734933a8a9804004053a3f21429390658fa",
+      "installedAt": "2026-10-20T13:54:10.244Z",
+      "updatedAt": "2026-10-20T13:54:10.244Z"
+    },
+    "prediction-market-oracle-research": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/prediction-market-oracle-research/SKILL.md",
+      "skillFolderHash": "93ca12eaf731c73128b91c343a1b6f2cc4687709",
+      "installedAt": "2026-10-20T13:54:10.249Z",
+      "updatedAt": "2026-10-20T13:54:10.249Z"
+    },
+    "prompt-caching-strategy": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/prompt-caching-strategy/SKILL.md",
+      "skillFolderHash": "b5a25b042ac7c7126251ad3b22e6aec27cdd4af8",
+      "installedAt": "2026-10-20T13:54:10.253Z",
+      "updatedAt": "2026-10-20T13:54:10.253Z"
+    },
+    "returns-reverse-logistics": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/returns-reverse-logistics/SKILL.md",
+      "skillFolderHash": "0c0e29853368b075735272360c6c586c1e4900d6",
+      "installedAt": "2026-10-20T13:54:10.256Z",
+      "updatedAt": "2026-10-20T13:54:10.256Z"
+    },
+    "scientific-thinking-literature-review": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/scientific-thinking-literature-review/SKILL.md",
+      "skillFolderHash": "e49eff3909df08e4740f5908f598825946ef90d7",
+      "installedAt": "2026-10-20T13:54:10.260Z",
+      "updatedAt": "2026-10-20T13:54:10.260Z"
+    },
+    "security-review": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/security-review/SKILL.md",
+      "skillFolderHash": "265978ddc5e0822ee3d40408722fb43a88f6cf78",
+      "installedAt": "2026-10-20T13:54:10.265Z",
+      "updatedAt": "2026-10-20T13:54:10.265Z"
+    },
+    "seo": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/seo/SKILL.md",
+      "skillFolderHash": "14c7dc40594663db67a8032d4ad5d3e472076dc6",
+      "installedAt": "2026-10-20T13:54:10.269Z",
+      "updatedAt": "2026-10-20T13:54:10.269Z"
+    },
+    "strategic-compact": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/strategic-compact/SKILL.md",
+      "skillFolderHash": "9d39ec30bbace4969deef3d2d7d6270d9d3b316b",
+      "installedAt": "2026-10-20T13:54:10.273Z",
+      "updatedAt": "2026-10-20T13:54:10.273Z"
+    },
+    "team-builder": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/team-builder/SKILL.md",
+      "skillFolderHash": "6496c599ee710dcc2e38753ed102ba9ac014492c",
+      "installedAt": "2026-10-20T13:54:10.278Z",
+      "updatedAt": "2026-10-20T13:54:10.278Z"
+    },
+    "unified-memory": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/unified-memory/SKILL.md",
+      "skillFolderHash": "ceca05fd06baf5c051e2068f1573db8568a5df9c",
+      "installedAt": "2026-10-20T13:54:10.284Z",
+      "updatedAt": "2026-10-20T13:54:10.284Z"
+    },
+    "workspace-surface-audit": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/workspace-surface-audit/SKILL.md",
+      "skillFolderHash": "cb171c84727d1419c5155a251b750caf5454188e",
+      "installedAt": "2026-10-20T13:54:10.289Z",
+      "updatedAt": "2026-10-20T13:54:10.289Z"
+    },
+    "x-api": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/affaan-m/ecc.git",
+      "skillPath": "skills/x-api/SKILL.md",
+      "skillFolderHash": "77d5c4da7e79eed794072846ecc2243035952bbe",
+      "installedAt": "2026-10-20T13:54:10.294Z",
+      "updatedAt": "2026-10-20T13:54:10.294Z"
+    },
+    "backtest-expert": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/backtest-expert/SKILL.md",
+      "skillFolderHash": "c91c94aca2f25483b952463c2302cdcf90bdb3a2",
+      "installedAt": "2026-10-20T13:59:53.296Z",
+      "updatedAt": "2026-10-20T13:59:53.296Z"
+    },
+    "breadth-chart-analyst": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/breadth-chart-analyst/SKILL.md",
+      "skillFolderHash": "86c67f920ec21ab72584d61a8dfcf3a2aaa9bbd7",
+      "installedAt": "2026-10-20T13:59:53.329Z",
+      "updatedAt": "2026-10-20T13:59:53.329Z"
+    },
+    "breakout-trade-planner": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/breakout-trade-planner/SKILL.md",
+      "skillFolderHash": "bf56b4dbc78c2a39511d0bdfa6b900940b81b431",
+      "installedAt": "2026-10-20T13:59:53.340Z",
+      "updatedAt": "2026-10-20T13:59:53.340Z"
+    },
+    "canslim-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/canslim-screener/SKILL.md",
+      "skillFolderHash": "1c97a741c5d267f17dd51374be38d72f9b00db22",
+      "installedAt": "2026-10-20T13:59:53.352Z",
+      "updatedAt": "2026-10-20T13:59:53.352Z"
+    },
+    "contrarian-setup-gate": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/contrarian-setup-gate/SKILL.md",
+      "skillFolderHash": "780426d6bc641d674513fb117a07a96a5ad9d337",
+      "installedAt": "2026-10-20T13:59:53.359Z",
+      "updatedAt": "2026-10-20T13:59:53.359Z"
+    },
+    "cot-contrarian-detector": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/cot-contrarian-detector/SKILL.md",
+      "skillFolderHash": "affded5a56dadfc89db166731f6fb8cf6f54798c",
+      "installedAt": "2026-10-20T13:59:53.371Z",
+      "updatedAt": "2026-10-20T13:59:53.371Z"
+    },
+    "crypto-regime-analyzer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/crypto-regime-analyzer/SKILL.md",
+      "skillFolderHash": "d8637a47ce442740774f14508e11ed3b01373796",
+      "installedAt": "2026-10-20T13:59:53.378Z",
+      "updatedAt": "2026-10-20T13:59:53.378Z"
+    },
+    "data-quality-checker": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/data-quality-checker/SKILL.md",
+      "skillFolderHash": "3711b615c10d74283705ae10f8c404650b91d76e",
+      "installedAt": "2026-10-20T13:59:53.387Z",
+      "updatedAt": "2026-10-20T13:59:53.387Z"
+    },
+    "dividend-growth-pullback-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/dividend-growth-pullback-screener/SKILL.md",
+      "skillFolderHash": "286af199c13efe7311a8308d13643bbabc332fd2",
+      "installedAt": "2026-10-20T13:59:53.400Z",
+      "updatedAt": "2026-10-20T13:59:53.400Z"
+    },
+    "downtrend-duration-analyzer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/downtrend-duration-analyzer/SKILL.md",
+      "skillFolderHash": "b8dc3ada9eb9ba6e8d4ae8060f7d74a6149dbc87",
+      "installedAt": "2026-10-20T13:59:53.405Z",
+      "updatedAt": "2026-10-20T13:59:53.405Z"
+    },
+    "drawdown-circuit-breaker": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/drawdown-circuit-breaker/SKILL.md",
+      "skillFolderHash": "dcb7dfea3357b1ba15cb3c26e3888910ccbe18e2",
+      "installedAt": "2026-10-20T13:59:53.416Z",
+      "updatedAt": "2026-10-20T13:59:53.416Z"
+    },
+    "dual-axis-skill-reviewer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/dual-axis-skill-reviewer/SKILL.md",
+      "skillFolderHash": "d9e35601456c4490406c31e3cf733e951f2d2deb",
+      "installedAt": "2026-10-20T13:59:53.423Z",
+      "updatedAt": "2026-10-20T13:59:53.423Z"
+    },
+    "earnings-calendar": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/earnings-calendar/SKILL.md",
+      "skillFolderHash": "c38a55f1e51485a47adfffa0b6457b3b34cf1464",
+      "installedAt": "2026-10-20T13:59:53.428Z",
+      "updatedAt": "2026-10-20T13:59:53.428Z"
+    },
+    "earnings-trade-analyzer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/earnings-trade-analyzer/SKILL.md",
+      "skillFolderHash": "05bc3e39a5e488361b66f8a933c8f732f99b9b4c",
+      "installedAt": "2026-10-20T13:59:53.439Z",
+      "updatedAt": "2026-10-20T13:59:53.439Z"
+    },
+    "economic-calendar-fetcher": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/economic-calendar-fetcher/SKILL.md",
+      "skillFolderHash": "71f3f58f55a8b4743679b3d02d9ba60112544da1",
+      "installedAt": "2026-10-20T13:59:53.446Z",
+      "updatedAt": "2026-10-20T13:59:53.446Z"
+    },
+    "edge-candidate-agent": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/edge-candidate-agent/SKILL.md",
+      "skillFolderHash": "79b4dfd7cf0554ba44e21cbf660299067b0f4cf1",
+      "installedAt": "2026-10-20T13:59:53.458Z",
+      "updatedAt": "2026-10-20T13:59:53.458Z"
+    },
+    "edge-concept-synthesizer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/edge-concept-synthesizer/SKILL.md",
+      "skillFolderHash": "0bc1f506abe6e2f30f5fd5ad440742d0df473b65",
+      "installedAt": "2026-10-20T13:59:53.469Z",
+      "updatedAt": "2026-10-20T13:59:53.469Z"
+    },
+    "edge-hint-extractor": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/edge-hint-extractor/SKILL.md",
+      "skillFolderHash": "66b665184e4e9f302786ee374a2dc8b617363f43",
+      "installedAt": "2026-10-20T13:59:53.476Z",
+      "updatedAt": "2026-10-20T13:59:53.476Z"
+    },
+    "edge-pipeline-orchestrator": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/edge-pipeline-orchestrator/SKILL.md",
+      "skillFolderHash": "b8d07d040a0d8e2e4469c089db4c705a3cd490db",
+      "installedAt": "2026-10-20T13:59:53.483Z",
+      "updatedAt": "2026-10-20T13:59:53.483Z"
+    },
+    "edge-signal-aggregator": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/edge-signal-aggregator/SKILL.md",
+      "skillFolderHash": "bc1524dc819120186c8d95312c7db0e3f6a04ea8",
+      "installedAt": "2026-10-20T13:59:53.488Z",
+      "updatedAt": "2026-10-20T13:59:53.488Z"
+    },
+    "edge-strategy-designer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/edge-strategy-designer/SKILL.md",
+      "skillFolderHash": "81681bb5bdbf24fdc454a7251e8460c8e7a03f2a",
+      "installedAt": "2026-10-20T13:59:53.497Z",
+      "updatedAt": "2026-10-20T13:59:53.497Z"
+    },
+    "edge-strategy-reviewer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/edge-strategy-reviewer/SKILL.md",
+      "skillFolderHash": "618661aa3fa8e053e872dded803dba209fc6b4d5",
+      "installedAt": "2026-10-20T13:59:53.503Z",
+      "updatedAt": "2026-10-20T13:59:53.503Z"
+    },
+    "exposure-coach": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/exposure-coach/SKILL.md",
+      "skillFolderHash": "4a53f76dd024d16ca9d311d65c0e4fe3175937b8",
+      "installedAt": "2026-10-20T13:59:53.509Z",
+      "updatedAt": "2026-10-20T13:59:53.509Z"
+    },
+    "finviz-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/finviz-screener/SKILL.md",
+      "skillFolderHash": "215e5fde224f07cae409e027aac33fff48f7591c",
+      "installedAt": "2026-10-20T13:59:53.526Z",
+      "updatedAt": "2026-10-20T13:59:53.526Z"
+    },
+    "ftd-detector": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/ftd-detector/SKILL.md",
+      "skillFolderHash": "fd3b383b1cf85fd972749744c4a2b287acff2615",
+      "installedAt": "2026-10-20T13:59:53.538Z",
+      "updatedAt": "2026-10-20T13:59:53.538Z"
+    },
+    "futures-position-sizer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/futures-position-sizer/SKILL.md",
+      "skillFolderHash": "e42b65a39590fb4ebaed7c62fce53e8e330e0c0a",
+      "installedAt": "2026-10-20T13:59:53.550Z",
+      "updatedAt": "2026-10-20T13:59:53.550Z"
+    },
+    "fxmacrodata-calendar": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/fxmacrodata-calendar/SKILL.md",
+      "skillFolderHash": "8b2fb064f4046f7a9541f6c9f11a319db5b0edd3",
+      "installedAt": "2026-10-20T13:59:53.555Z",
+      "updatedAt": "2026-10-20T13:59:53.555Z"
+    },
+    "ibd-distribution-day-monitor": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/ibd-distribution-day-monitor/SKILL.md",
+      "skillFolderHash": "b27100d8ac3fe2a8a222dd63c3114d15187dc4b4",
+      "installedAt": "2026-10-20T13:59:53.566Z",
+      "updatedAt": "2026-10-20T13:59:53.566Z"
+    },
+    "institutional-flow-tracker": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/institutional-flow-tracker/SKILL.md",
+      "skillFolderHash": "81a9535bae2aa0a6882925810a709fc3a232e55b",
+      "installedAt": "2026-10-20T13:59:53.572Z",
+      "updatedAt": "2026-10-20T13:59:53.572Z"
+    },
+    "kanchi-dividend-review-monitor": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/kanchi-dividend-review-monitor/SKILL.md",
+      "skillFolderHash": "49938587898372ab1ac9ce928294f4beea2a3bb6",
+      "installedAt": "2026-10-20T13:59:53.579Z",
+      "updatedAt": "2026-10-20T13:59:53.579Z"
+    },
+    "kanchi-dividend-sop": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/kanchi-dividend-sop/SKILL.md",
+      "skillFolderHash": "0d874e5f274eadaae73c33c09fb4a4eefc4440bc",
+      "installedAt": "2026-10-20T13:59:53.601Z",
+      "updatedAt": "2026-10-20T13:59:53.601Z"
+    },
+    "kanchi-dividend-us-tax-accounting": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/kanchi-dividend-us-tax-accounting/SKILL.md",
+      "skillFolderHash": "c9a1f778b238a6d6815348a28f3236520aaf8bb5",
+      "installedAt": "2026-10-20T13:59:53.616Z",
+      "updatedAt": "2026-10-20T13:59:53.616Z"
+    },
+    "macro-regime-detector": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/macro-regime-detector/SKILL.md",
+      "skillFolderHash": "8054572a663189422ff97aa48809fbbeb9e3b46d",
+      "installedAt": "2026-10-20T13:59:53.623Z",
+      "updatedAt": "2026-10-20T13:59:53.623Z"
+    },
+    "manifoldbt-backtester": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/manifoldbt-backtester/SKILL.md",
+      "skillFolderHash": "82c65e064feb0b9e21f57423f984ca995ba956d2",
+      "installedAt": "2026-10-20T13:59:53.634Z",
+      "updatedAt": "2026-10-20T13:59:53.634Z"
+    },
+    "market-breadth-analyzer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/market-breadth-analyzer/SKILL.md",
+      "skillFolderHash": "df35454b77c251cebbacec3ffa7e8f4029941ce5",
+      "installedAt": "2026-10-20T13:59:53.642Z",
+      "updatedAt": "2026-10-20T13:59:53.642Z"
+    },
+    "market-environment-analysis": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/market-environment-analysis/SKILL.md",
+      "skillFolderHash": "f4780e625eda2199c2e19f4614a09c446f0f2bbc",
+      "installedAt": "2026-10-20T13:59:53.656Z",
+      "updatedAt": "2026-10-20T13:59:53.656Z"
+    },
+    "market-news-analyst": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/market-news-analyst/SKILL.md",
+      "skillFolderHash": "81730259c0026e2c5236ae6074f0fdc88b5d6836",
+      "installedAt": "2026-10-20T13:59:53.668Z",
+      "updatedAt": "2026-10-20T13:59:53.668Z"
+    },
+    "market-top-detector": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/market-top-detector/SKILL.md",
+      "skillFolderHash": "74cb46c4a1834db93b2d0d7807a74d62f97965ba",
+      "installedAt": "2026-10-20T13:59:53.682Z",
+      "updatedAt": "2026-10-20T13:59:53.682Z"
+    },
+    "mt5-robot-tester": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/mt5-robot-tester/SKILL.md",
+      "skillFolderHash": "a81ff7a8760d08c5c0876ee0865733536410e0c8",
+      "installedAt": "2026-10-20T13:59:53.694Z",
+      "updatedAt": "2026-10-20T13:59:53.694Z"
+    },
+    "news-reaction-failure-analyzer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/news-reaction-failure-analyzer/SKILL.md",
+      "skillFolderHash": "4bf335c648d67f3571ca3e65a7266c8dc41df056",
+      "installedAt": "2026-10-20T13:59:53.705Z",
+      "updatedAt": "2026-10-20T13:59:53.705Z"
+    },
+    "options-strategy-advisor": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/options-strategy-advisor/SKILL.md",
+      "skillFolderHash": "73275099a7425f5e02247aa74bb240dad6289dbe",
+      "installedAt": "2026-10-20T13:59:53.717Z",
+      "updatedAt": "2026-10-20T13:59:53.717Z"
+    },
+    "pair-trade-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/pair-trade-screener/SKILL.md",
+      "skillFolderHash": "4c615a7aba6d302b32a1d3cbf1a0136bad36cd77",
+      "installedAt": "2026-10-20T13:59:53.727Z",
+      "updatedAt": "2026-10-20T13:59:53.727Z"
+    },
+    "parabolic-short-trade-planner": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/parabolic-short-trade-planner/SKILL.md",
+      "skillFolderHash": "f103a236922b2a9474ddfea6ec8d93cfcfac167a",
+      "installedAt": "2026-10-20T13:59:53.735Z",
+      "updatedAt": "2026-10-20T13:59:53.735Z"
+    },
+    "pead-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/pead-screener/SKILL.md",
+      "skillFolderHash": "8b583543ec74ac27b20341be6d6e0943a821f450",
+      "installedAt": "2026-10-20T13:59:53.758Z",
+      "updatedAt": "2026-10-20T13:59:53.758Z"
+    },
+    "portfolio-manager": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/portfolio-manager/SKILL.md",
+      "skillFolderHash": "b4116412ada1aa8bedecf026bac4ce86fa7a9495",
+      "installedAt": "2026-10-20T13:59:53.767Z",
+      "updatedAt": "2026-10-20T13:59:53.767Z"
+    },
+    "position-sizer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/position-sizer/SKILL.md",
+      "skillFolderHash": "48d8d605ab2f4036b3fe4c460b4d96b403042081",
+      "installedAt": "2026-10-20T13:59:53.782Z",
+      "updatedAt": "2026-10-20T13:59:53.782Z"
+    },
+    "pre-trade-discipline-gate": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/pre-trade-discipline-gate/SKILL.md",
+      "skillFolderHash": "69f48deb189789e7a8c40fce33f80ee27c05659b",
+      "installedAt": "2026-10-20T13:59:53.792Z",
+      "updatedAt": "2026-10-20T13:59:53.792Z"
+    },
+    "residual-edge-analyzer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/residual-edge-analyzer/SKILL.md",
+      "skillFolderHash": "3ffc590c44e1eb52efc47cde2826c48ca24f5047",
+      "installedAt": "2026-10-20T13:59:53.800Z",
+      "updatedAt": "2026-10-20T13:59:53.800Z"
+    },
+    "scenario-analyzer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/scenario-analyzer/SKILL.md",
+      "skillFolderHash": "c8a2d9192930f80fe6c950b5dbdc59529df30c73",
+      "installedAt": "2026-10-20T13:59:53.815Z",
+      "updatedAt": "2026-10-20T13:59:53.815Z"
+    },
+    "sector-analyst": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/sector-analyst/SKILL.md",
+      "skillFolderHash": "70ae2bab4d0ca63949d3b8912ccbcfc3b33aac73",
+      "installedAt": "2026-10-20T13:59:53.828Z",
+      "updatedAt": "2026-10-20T13:59:53.828Z"
+    },
+    "signal-postmortem": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/signal-postmortem/SKILL.md",
+      "skillFolderHash": "49725b85c633a3d355d5fe9703566b56777d23a7",
+      "installedAt": "2026-10-20T13:59:53.836Z",
+      "updatedAt": "2026-10-20T13:59:53.836Z"
+    },
+    "skill-designer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/skill-designer/SKILL.md",
+      "skillFolderHash": "0b0db4d65c3d8179d2d73ac62fcf684950ab90de",
+      "installedAt": "2026-10-20T13:59:53.856Z",
+      "updatedAt": "2026-10-20T13:59:53.856Z"
+    },
+    "skill-idea-miner": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/skill-idea-miner/SKILL.md",
+      "skillFolderHash": "b8439ce75439e23002c282c79a890582b2fe6a14",
+      "installedAt": "2026-10-20T13:59:53.864Z",
+      "updatedAt": "2026-10-20T13:59:53.864Z"
+    },
+    "skill-integration-tester": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/skill-integration-tester/SKILL.md",
+      "skillFolderHash": "e6c8ae7803ee23bc1ae2cdeb90c0f0518dc8a2a7",
+      "installedAt": "2026-10-20T13:59:53.871Z",
+      "updatedAt": "2026-10-20T13:59:53.871Z"
+    },
+    "stanley-druckenmiller-investment": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/stanley-druckenmiller-investment/SKILL.md",
+      "skillFolderHash": "1a35d696d1ce01a23277626eb3b697f4633c7e70",
+      "installedAt": "2026-10-20T13:59:53.877Z",
+      "updatedAt": "2026-10-20T13:59:53.877Z"
+    },
+    "stockbee-20pct-study": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/stockbee-20pct-study/SKILL.md",
+      "skillFolderHash": "dc28e79d99acf29f9ceaf62f952ccf1957e874a8",
+      "installedAt": "2026-10-20T13:59:53.885Z",
+      "updatedAt": "2026-10-20T13:59:53.885Z"
+    },
+    "stockbee-episodic-pivot-analyzer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/stockbee-episodic-pivot-analyzer/SKILL.md",
+      "skillFolderHash": "3c935ab57c09fda66f38e4c57da4407143f04e73",
+      "installedAt": "2026-10-20T13:59:53.895Z",
+      "updatedAt": "2026-10-20T13:59:53.895Z"
+    },
+    "stockbee-exhaustion-hammer-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/stockbee-exhaustion-hammer-screener/SKILL.md",
+      "skillFolderHash": "6a918d150b704a2c20d5b0316ae293aee7aef3d1",
+      "installedAt": "2026-10-20T13:59:53.913Z",
+      "updatedAt": "2026-10-20T13:59:53.913Z"
+    },
+    "stockbee-momentum-burst-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/stockbee-momentum-burst-screener/SKILL.md",
+      "skillFolderHash": "e879fd4d507782ffb421b64039a5ae5d2a94777a",
+      "installedAt": "2026-10-20T13:59:53.920Z",
+      "updatedAt": "2026-10-20T13:59:53.920Z"
+    },
+    "stockbee-setup-fluency-trainer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/stockbee-setup-fluency-trainer/SKILL.md",
+      "skillFolderHash": "56d11bf04dd9e9250520a0a590a16abf55486eae",
+      "installedAt": "2026-10-20T13:59:53.933Z",
+      "updatedAt": "2026-10-20T13:59:53.933Z"
+    },
+    "strategy-pivot-designer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/strategy-pivot-designer/SKILL.md",
+      "skillFolderHash": "7ae06e9f93ed82ae6bd152697062be26c5d1a5ef",
+      "installedAt": "2026-10-20T13:59:53.948Z",
+      "updatedAt": "2026-10-20T13:59:53.948Z"
+    },
+    "technical-analyst": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/technical-analyst/SKILL.md",
+      "skillFolderHash": "f6fe4af0c3e6716aa1437eac1a6173d691b91a1c",
+      "installedAt": "2026-10-20T13:59:53.959Z",
+      "updatedAt": "2026-10-20T13:59:53.959Z"
+    },
+    "theme-detector": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/theme-detector/SKILL.md",
+      "skillFolderHash": "910c405feb0212abd7807a03a7d6e64cf2e3b166",
+      "installedAt": "2026-10-20T13:59:53.965Z",
+      "updatedAt": "2026-10-20T13:59:53.965Z"
+    },
+    "trade-hypothesis-ideator": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/trade-hypothesis-ideator/SKILL.md",
+      "skillFolderHash": "560f57e89d08a2cf9036d8ad56dc6cb8cc0a4d51",
+      "installedAt": "2026-10-20T13:59:53.969Z",
+      "updatedAt": "2026-10-20T13:59:53.969Z"
+    },
+    "trade-performance-coach": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/trade-performance-coach/SKILL.md",
+      "skillFolderHash": "67d5fe86d6afe3c002d7b2a62bdb0aacc2ff461f",
+      "installedAt": "2026-10-20T13:59:53.976Z",
+      "updatedAt": "2026-10-20T13:59:53.976Z"
+    },
+    "trader-memory-core": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/trader-memory-core/SKILL.md",
+      "skillFolderHash": "85748d666c6088249bf066d007e1bed36319a480",
+      "installedAt": "2026-10-20T13:59:53.984Z",
+      "updatedAt": "2026-10-20T13:59:53.984Z"
+    },
+    "uptrend-analyzer": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/uptrend-analyzer/SKILL.md",
+      "skillFolderHash": "a083ed1f1bb97db821324ba13df7e2200ace232e",
+      "installedAt": "2026-10-20T13:59:54.013Z",
+      "updatedAt": "2026-10-20T13:59:54.013Z"
+    },
+    "us-market-bubble-detector": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/us-market-bubble-detector/SKILL.md",
+      "skillFolderHash": "28a3e500a37b7cb6e8f4c62ef002953bd400bb01",
+      "installedAt": "2026-10-20T13:59:54.025Z",
+      "updatedAt": "2026-10-20T13:59:54.025Z"
+    },
+    "us-stock-analysis": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/us-stock-analysis/SKILL.md",
+      "skillFolderHash": "1e528c9a06a83ad592ef31dd8b11c42a27e5523a",
+      "installedAt": "2026-10-20T13:59:54.037Z",
+      "updatedAt": "2026-10-20T13:59:54.037Z"
+    },
+    "us-undervalued-growth-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/us-undervalued-growth-screener/SKILL.md",
+      "skillFolderHash": "4d760aa8f1e376a1c5610a0c3db9c887e8718fb2",
+      "installedAt": "2026-10-20T13:59:54.051Z",
+      "updatedAt": "2026-10-20T13:59:54.051Z"
+    },
+    "value-dividend-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/value-dividend-screener/SKILL.md",
+      "skillFolderHash": "060ce3843b49a213da9110844b153b0f6b04a8ac",
+      "installedAt": "2026-10-20T13:59:54.062Z",
+      "updatedAt": "2026-10-20T13:59:54.062Z"
+    },
+    "vcp-screener": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/vcp-screener/SKILL.md",
+      "skillFolderHash": "d9de7120b88ced66c43bafaeffcdbb9fa8793078",
+      "installedAt": "2026-10-20T13:59:54.068Z",
+      "updatedAt": "2026-10-20T13:59:54.068Z"
+    },
+    "weekly-performance-digest": {
+      "source": "tradermonty/claude-trading-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tradermonty/claude-trading-skills.git",
+      "skillPath": "skills/weekly-performance-digest/SKILL.md",
+      "skillFolderHash": "3a7cb1e1709c24cff3e9e75e4500fa12e49bbba0",
+      "installedAt": "2026-10-20T13:59:54.083Z",
+      "updatedAt": "2026-10-20T13:59:54.083Z"
+    },
+    "triage": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/triage/SKILL.md",
+      "skillFolderHash": "4cb951d62ecccaed601cdc5f9a1b7b3d8a799635",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-10-21T09:55:50.626Z",
+      "updatedAt": "2026-10-21T09:55:50.626Z"
+    },
+    "investment-management": {
+      "source": "broomva/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/broomva/skills.git",
+      "skillPath": "skills/finance/investment-management/SKILL.md",
+      "skillFolderHash": "c47176a999900c239f2983b4a823d56d9804b832",
+      "installedAt": "2026-10-23T14:58:59.355Z",
+      "updatedAt": "2026-10-23T14:58:59.355Z"
+    },
+    "execution-algorithms": {
+      "source": "omer-metin/skills-for-antigravity",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/omer-metin/skills-for-antigravity.git",
+      "skillPath": "skills/execution-algorithms/SKILL.md",
+      "skillFolderHash": "3389d6cecafdaf2ec6d2a93f8b31f6e65023a648",
+      "installedAt": "2026-10-23T19:52:34.057Z",
+      "updatedAt": "2026-10-23T19:52:34.057Z"
+    },
+    "hunt": {
+      "source": "tw93/waza",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tw93/waza.git",
+      "skillPath": "skills/hunt/SKILL.md",
+      "skillFolderHash": "d62b8a89b441d0aa0e48ebf17b0fa8ead0e5faf6",
+      "pluginName": "waza-hunt",
+      "installedAt": "2026-10-25T14:18:57.759Z",
+      "updatedAt": "2026-10-25T14:18:57.759Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "droid",
+    "fx",
+    "gemini-cli",
+    "github-copilot",
+    "kilo",
+    "kimi-code-cli",
+    "opencode",
+    "pi",
+    "warp",
+    "zed",
+    "claude-code",
+    "hermes-agent",
+    "kiro-cli",
+    "openclaw",
+    "cortex",
+    "mcpjam",
+    "openhands",
+    "grok",
+    "qwen-code",
+    "zcode",
+    "zencoder"
+  ]
+}
