@@ -8,7 +8,7 @@ provider: Bitunix
 
 Generated from the official Bitunix documentation on 2026-11-23. Base URL: `https://fapi.bitunix.com`. Source pages: 50.
 
-The [Endpoint Index](#endpoint-index) below gives the HTTP method, path and rate limit for every endpoint; the full request / response / push parameter tables are in [`references/endpoints.md`](references/endpoints.md). Use both to verify agent-generated code before you call the API: if a parameter name, type or required flag differs from these files, fix the code.
+The [Endpoint Index](#endpoint-index) below gives the HTTP method, path and rate limit for every endpoint; the full request / response / push parameter tables are in the per-category files under `references/` (see [Reference files](#reference-files)). Use both to verify agent-generated code before you call the API: if a parameter name, type or required flag differs from these files, fix the code.
 
 > Parameter names, types, enum values and required flags are taken verbatim from the official docs. Do not invent alternatives.
 
@@ -17,7 +17,12 @@ The [Endpoint Index](#endpoint-index) below gives the HTTP method, path and rate
 | File | Contents |
 |---|---|
 | `SKILL.md` (this file) | Conventions, signing, enums, endpoint index, WebSocket guide, error codes, order units, TP/SL methods, liquidation, debugging checklist |
-| `references/endpoints.md` | Full request / response / push parameter tables for all 50 endpoints |
+| `references/market.md` | Tickers, depth, funding rate (single / batch / history), kline, trading pairs |
+| `references/account.md` | Position margin, leverage, margin mode, position mode, leverage+margin query, single account, asset query |
+| `references/position.md` | Pending positions, history positions, position tiers |
+| `references/tpsl.md` | Place / modify / cancel TP-SL orders, pending and history TP-SL |
+| `references/trade.md` | Place / modify / cancel orders, batch order, cancel all, close all, flash close, order detail, pending / history orders, history trades |
+| `references/websocket.md` | Public and private channel push payloads |
 
 ## How to use this skill
 
@@ -243,8 +248,8 @@ Official doc: [https://www.bitunix.com/api-docs/futures/ErrorCode/error_code.htm
 | 30020 | Trigger price for TP should be higher than mark price | — |
 | 30021 | Trigger price for TP should be lower than mark price | — |
 | 30022 | Trigger price for SL should be higher than mark price | — |
-| 30023 | Trigger price fo SL should be lower than mark price | — |
-| 30024 | Trigger price for SL should be lower than liq price | — |
+| 30023 | Trigger price for SL should be lower than mark price | — |
+| 30024 | Trigger price for SL should be lower than lip price | — |
 | 30025 | Trigger price for SL should be higher than liq price | — |
 | 30026 | TP price must be greater than last price | — |
 | 30027 | TP price must be greater than mark price | — |
@@ -348,20 +353,20 @@ def ws_sign(api_key, secret_key):
 
 | Channel `ch` | Scope | Doc section |
 |---|---|---|
-| `balance` | private | [Balance Channel](references/endpoints.md#balance-channel) |
-| `order` | private | [Order Channel](references/endpoints.md#order-channel) |
-| `position` | private | [Position Channel](references/endpoints.md#position-channel) |
-| `tpsl` | private | [TP/SL Channel](references/endpoints.md#tpsl-channel) |
-| `depth_books`, `depth_book1`, `depth_book5`, `depth_book15` | public | [Depth Channel](references/endpoints.md#depth-channel) |
-| `market_kline_<interval>`, `mark_kline_<interval>` | public | [Kline Channel](references/endpoints.md#kline-channel) |
-| `price` | public | [Market Price Channel](references/endpoints.md#market-price-channel) |
-| `ticker` | public | [Ticker Channel](references/endpoints.md#ticker-channel) |
-| `tickers` | public | [Tickers Channel](references/endpoints.md#tickers-channel) |
-| `trade` | public | [Trade Channel](references/endpoints.md#trade-channel) |
+| `balance` | private | [Balance Channel](references/websocket.md#balance-channel) |
+| `order` | private | [Order Channel](references/websocket.md#order-channel) |
+| `position` | private | [Position Channel](references/websocket.md#position-channel) |
+| `tpsl` | private | [TP/SL Channel](references/websocket.md#tpsl-channel) |
+| `depth_books`, `depth_book1`, `depth_book5`, `depth_book15` | public | [Depth Channel](references/websocket.md#depth-channel) |
+| `market_kline_<interval>`, `mark_kline_<interval>` | public | [Kline Channel](references/websocket.md#kline-channel) |
+| `price` | public | [Market Price Channel](references/websocket.md#market-price-channel) |
+| `ticker` | public | [Ticker Channel](references/websocket.md#ticker-channel) |
+| `tickers` | public | [Tickers Channel](references/websocket.md#tickers-channel) |
+| `trade` | public | [Trade Channel](references/websocket.md#trade-channel) |
 
 > The channel names are **not** the page titles. Depth is `depth_books` / `depth_book1` / `depth_book5` / `depth_book15` (there is no plain `depth_book`), and kline is `market_kline_<interval>` or `mark_kline_<interval>` (there is no plain `kline`). Subscribing to `depth` or `kline` silently yields nothing.
 
-**Kline intervals** in the channel name: `1min` `3min` `5min` `15min` `30min` `60min` `2h` `4h` `6h` `8h` `12h` `1day` `3day` `1week` `1month`. Note these differ from the REST `interval` values (`1m`, `1h`, `1d`, `1w`, `1M`). To change interval you must `unsubscribe` the old channel before subscribing the new one.
+**Kline intervals** in the channel name: `1min` `3min` `5min` `15min` `30min` `60min` `2h` `4h` `6h` `8h` `12h` `1day` `3day` `1week` `1month`. Note these differ from the REST `interval` values (h1m`, `1h`, `1d`, `1w`, `1M`). To change interval you must `unsubscribe` the old channel before subscribing the new one.
 
 ### Push message shape
 
@@ -426,7 +431,7 @@ def nominal_from_qty(qty, price):
 
 Notes:
 
-- `qty` must respect the symbol's minimum quantity and step size — fetch them from [Get Trading Pairs](references/endpoints.md#get-trading-pairs) and round down, or the order fails with `30016` / `30017`.
+- `qty` must respect the symbol's minimum quantity and step size — fetch them from [Get Trading Pairs](references/market.md#get-trading-pairs) and round down, or the order fails with `30016` / `30017`.
 - Cost value normally includes the opening fee, so the real cost is slightly above `nominal / leverage`.
 - Leverage raises the position size for the same margin, and raises the cost and the PnL risk with it.
 
@@ -455,7 +460,7 @@ Fixed trigger prices for one position; the whole position closes when hit.
 
 *Example:* long BTC at 60,000, TP at 65,000, SL at 58,000. At either price the entire position is closed.
 
-*API:* [Place Position TP/SL Order](references/endpoints.md#place-position-tpsl-order) (`/api/v1/futures/tpsl/position/place_order`) with `symbol`, `positionId`, `tpPrice`, `tpStopType`, `slPrice`, `slStopType`. Modify with [Modify Position TP/SL Order](references/endpoints.md#modify-position-tpsl-order).
+*API:* [Place Position TP/SL Order](references/tpsl.md#place-position-tpsl-order) (`/api/v1/futures/tpsl/position/place_order`) with `symbol`, `positionId`, `tpPrice`, `tpStopType`, `slPrice`, `slStopType`. Modify with [Modify Position TP/SL Order](references/tpsl.md#modify-position-tpsl-order).
 
 ### 2. Partial TP/SL
 
@@ -463,15 +468,15 @@ Several closing ratios on one position, executed in stages.
 
 *Example:* close 30% at 65,000, another 40% at 68,000, leave the rest running.
 
-*API:* [Place TP/SL Order](references/endpoints.md#place-tpsl-order) (`/api/v1/futures/tpsl/place_order`) — this is the variant that carries `tpQty` / `slQty`, the size to close at each trigger. `tpQty` and `slQty` must not exceed the position size (`30038`).
+*API:* [Place TP/SL Order](references/tpsl.md#place-tpsl-order) (`/api/v1/futures/tpsl/place_order`) — this is the variant that carries `tpQty` / `slQty`, the size to close at each trigger. `tpQty` and `slQty` must not exceed the position size (`30038`).
 
 ### 3. Trailing TP/SL
 
 Activates at an activation price, then closes on a retracement measured either as a **Ratio** (callback %) or an **Interval**.
 
-*Example:** long ETH at 2,000, activation 2,000, 5% callback. Price runs to 2,500; a 5% pullback from the peak (to 2,375) closes the position at market.
+*Example:* long ETH at 2,000, activation 2,000, 5% callback. Price runs to 2,500; a 5% pullback from the peak (to 2,375) closes the position at market.
 
-*Behaviour:** for a long, the exit follows the price up and fires on a pullback; for a short, it follows the price down and fires on a bounce.
+*Behaviour:* for a long, the exit follows the price up and fires on a pullback; for a short, it follows the price down and fires on a bounce.
 
 *API:* trailing orders are configured in the UI / order `effect` and TP-SL fields; the REST TP/SL endpoints above cover fixed-price TP/SL. Do not assume a `trailing` parameter exists on the TP/SL endpoints — check the endpoint's parameter table.
 
@@ -479,7 +484,7 @@ Activates at an activation price, then closes on a retracement measured either a
 
 One trigger for the whole account, measured on total account PnL.
 
-*Example:** holding BTC, ETH and SOL, set account TP at +1,000 USDT and account SL at −500 USDT. When total PnL reaches either threshold, **all** futures positions close.
+*Example:* holding BTC, ETH and SOL, set account TP at +1,000 USDT and account SL at −500 USDT. When total PnL reaches either threshold, **all** futures positions close.
 
 *API:* account-level TP/SL is a UI/account setting, not a per-order field. It is not exposed by the order endpoints in this file.
 
@@ -525,20 +530,18 @@ The tier is selected by the **leverage you choose**, and the order/position valu
 ### Where the tier bites
 
 1. **Order placement** — an order whose resulting position value exceeds the tier's cap is rejected (`20002`).
-2. **Liquidation** — the maintenance margin rate is taken from the tier matching the *actual* position value, and that rate drives the margin ratio and the liquidation price.
+2. **L�quidation** — the maintenance margin rate is taken from the tier matching the *actual* position value, and that rate drives the margin ratio and the liquidation price.
 
 ### Liquidation sequence
 
 When a position enters forced liquidation, the system does **not** immediately close it:
 
 1. **Cancel open orders** to release margin.
-2. **Re-check
-** the liquidation condition.
+2. **Re-check** the liquidation condition.
 3. If still at risk and the tier is **above 1**, **partially reduce** the position to drop it into a lower tier, which lowers the required maintenance margin rate. Re-check after every reduction.
-4. If the tier is **already 1** and the position still fails the maintenance-margin requirement, **force-liquidate*** it.
+4. If the tier is **already 1** and the position still fails the maintenance-margin requirement, **force-liquidate** it.
 
-The partial close uses a **FOK (
-Fill or Kill)** order. If the FOK fails, the whole position is liquidated.
+The partial close uses a **FOK (Fill or Kill)** order. If the FOK fails, the whole position is liquidated.
 
 **Cross margin:** the system checks whether *any* open position is above tier 1, reduces according to the reduction priority, and re-detects liquidation risk after each reduction. If every position is already at tier 1 and liquidation still triggers, forced liquidation runs.
 
@@ -566,7 +569,7 @@ The position is cut to 2,500,000 USDT, which moves it to tier 3; the maintenance
 
 ### Practical rules for trading code
 
-- Read the live tiers from [Get Position Tiers](references/endpoints.md#get-position-tiers) (`GET /api/v1/futures/position/get_position_tiers?symbol=...`) before sizing a large order — do not hardcode the table, it changes per symbol.
+- Read the live tiers from [Get Position Tiers](references/position.md#get-position-tiers) (`GET /api/v1/futures/position/get_position_tiers?symbol=...`) before sizing a large order — do not hardcode the table, it changes per symbol.
 - Compute the liquidation price from the **tier's** maintenance margin rate, not a single global rate.
 - Treat `20002` as "reduce size or lower leverage", not as a transient error to retry.
 - A `30001` on entry means the price is close enough to liquidation that the order would be liquidated on fill — widen the distance or cut leverage.
